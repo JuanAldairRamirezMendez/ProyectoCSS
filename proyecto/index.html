@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastelería FlavorFusion</title>
+  <link rel="stylesheet" href="css/st.css">
+</head>
+<body>
+  <header>
+    <h1>Pastelería FlavorFusion</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Pasteles</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    <!-- Formulario de registro -->
+    <form id="register-form" style="margin-top: 15px;">
+        <fieldset>
+          <legend>Registro</legend>
+          <input type="text" id="reg-username" placeholder="Usuario" required />
+          <input type="email" id="reg-email" placeholder="Correo" required />
+          <input type="password" id="reg-password" placeholder="Contraseña" required />
+          <button type="button" id="btn-register">Registrar</button>
+          <p>¿Ya tienes cuenta? <a href="#" id="show-login">Iniciar sesión</a></p>
+        </fieldset>
+      </form>
+  
+      <!-- Formulario de inicio de sesión (oculto inicialmente) -->
+      <form id="login-form" style="display:none; margin-top: 15px;">
+        <fieldset>
+          <legend>Inicio de sesión</legend>
+          <input type="text" id="login-username" placeholder="Usuario" required />
+          <input type="password" id="login-password" placeholder="Contraseña" required />
+          <button type="button" id="btn-login">Entrar</button>
+          <p>¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
+        </fieldset>
+      </form>
+  
+      <!-- Mensaje de bienvenida -->
+      <section id="welcome-section" style="display:none; margin-top: 15px;">
+        <p>Bienvenido, <strong id="user-welcome"></strong>!</p>
+        <button id="btn-logout">Cerrar sesión</button>
+      </section>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nuestros Pasteles</h2>
+      <article class="pastel">
+        <h3>Pastel de Chocolate</h3>
+        <p>Delicioso pastel con cobertura de ganache y relleno suave.</p>
+        <a href="nutricion-chocolate.html" class="pastel-link" target="_blank" rel="noopener noreferrer" aria-label="Información nutricional y compra de Pastel de Chocolate">
+          <img src="images/chocolatePastel.jpg" alt="Pastel de Chocolate" class="pastel-img">
+        </a>
+      </article>
+      
+      <article class="pastel">
+        <h3>Tres leches</h3>
+        <p>Delicioso pastel con cobertura de ganache y relleno suave.</p>
+        <a href="nutricion-tresleches.html" class="pastel-link" target="_blank" rel="noopener noreferrer" aria-label="Información nutricional y compra de Pastel Tres Leches">
+          <img src="images/tresleches.jpg" alt="Pastel Tres Leches" class="pastel-img">
+        </a>
+      </article>
+      
+      <article class="pastel">
+        <h3>Cheesecake de Fresa</h3>
+        <p>Clásico cheesecake con fresa natural.</p>
+        <a href="nutricion-cheesecake.html" class="pastel-link" target="_blank" rel="noopener noreferrer" aria-label="Información nutricional y compra de Cheesecake de Fresa">
+          <img src="images/cheesecakefresa.jpg" alt="Cheesecake de Fresa" class="pastel-img">
+        </a>
+      </article>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FlavorFusion</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

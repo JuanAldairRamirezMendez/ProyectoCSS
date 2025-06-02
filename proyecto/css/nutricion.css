@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff8f0;
+    color: #5c3d2e;
+    padding: 20px;
+    animation: fadeIn 1.5s ease forwards;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  header {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: slideDown 1s ease forwards;
+  }
+  
+  @keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #6a0572;
+    margin-bottom: 8px;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 900px;
+    background: #fff0f5;
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: 0 6px 15px rgba(106, 5, 114, 0.15);
+    animation: zoomIn 1s ease forwards;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(106, 5, 114, 0.3);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05) rotate(-2deg);
+  }
+  
+  h2 {
+    color: #6a0572;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .nutritional-info {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .nutritional-info ul {
+    list-style: inside disc;
+    margin-left: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+  }
+  
+  .buy-section {
+    text-align: center;
+  }
+  
+  .buy-btn {
+    background-color: #6a0572;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(106, 5, 114, 0.5);
+  }
+  
+  .buy-btn:hover,
+  .buy-btn:focus {
+    background-color: #a32fbc;
+    transform: scale(1.1);
+    outline: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  
+    main {
+      padding: 20px 15px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .nutritional-info {
+      font-size: 1rem;
+    }
+  
+    .buy-btn {
+      font-size: 1rem;
+      padding: 10px 24px;
+    }
+  }
+  
