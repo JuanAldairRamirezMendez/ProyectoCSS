@@ -1,0 +1,22 @@
+{
+  "name": "proyectocss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanAldairRamirezMendez/ProyectoCSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanAldairRamirezMendez/ProyectoCSS/issues"
+  },
+  "homepage": "https://github.com/JuanAldairRamirezMendez/ProyectoCSS#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.30"
+  }
+}
