@@ -1,147 +1,164 @@
+/* VARIABLES GLOBALES */
+:root {
+  --color-bg: #fff8f0;
+  --color-bg-main: #fff0f5;
+  --color-text: #5c3d2e;
+  --color-primary: #6a0572;
+  --color-primary-hover: #a32fbc;
+  --color-shadow: rgba(106, 5, 114, 0.3);
+  --color-shadow-btn: rgba(106, 5, 114, 0.5);
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 25px;
+  animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  max-width: 900px;
+  background: var(--color-bg-main);
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 15px var(--color-shadow);
+  animation: zoomIn 1s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* IMAGEN */
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* TEXTOS */
+h2 {
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.nutritional-info {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.nutritional-info ul {
+  list-style: disc inside;
+  margin: 0 auto 30px auto;
+  max-width: 600px;
+}
+
+/* BOTÓN DE COMPRA */
+.buy-section {
+  text-align: center;
+}
+
+.buy-btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px var(--color-shadow-btn);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover,
+.buy-btn:focus {
+  background-color: var(--color-primary-hover);
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff8f0;
-    color: #5c3d2e;
-    padding: 20px;
-    animation: opacidad 1.5s ease forwards;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
   }
-  
-  @keyframes opacidad {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  header {
-    width: 100%;
-    max-width: 900px;
-    text-align: center;
-    margin-bottom: 25px;
-    animation: trasladarAbajo 1s ease forwards;
-  }
-  
-  @keyframes trasladarAbajo {
-    from {transform: translateY(-50px); opacity: 0;}
-    to {transform: translateY(0); opacity: 1;}
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    color: #6a0572;
-    margin-bottom: 8px;
-  }
-  
+
   main {
-    width: 100%;
-    max-width: 900px;
-    background: #fff0f5;
-    border-radius: 15px;
-    padding: 30px 25px;
-    box-shadow: 0 6px 15px rgba(106, 5, 114, 0.15);
-    animation: hacerZoom 1s ease forwards;
+    padding: 20px 15px;
   }
-  
-  @keyframes hacerZoom {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+
+  header h1 {
+    font-size: 1.8rem;
   }
-  
-  .image-container {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .image-container img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(106, 5, 114, 0.3);
-    transition: transform 0.5s ease;
-    cursor: pointer;
-  }
-  
-  .image-container img:hover {
-    transform: scale(1.05) rotate(-2deg);
-  }
-  
-  h2 {
-    color: #6a0572;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
+
   .nutritional-info {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
   }
-  
-  .nutritional-info ul {
-    list-style: inside disc;
-    margin-left: 20px;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-  }
-  
-  .buy-section {
-    text-align: center;
-  }
-  
+
   .buy-btn {
-    background-color: #6a0572;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.4s ease, transform 0.3s ease;
-    box-shadow: 0 6px 12px rgba(106, 5, 114, 0.5);
+    font-size: 1rem;
+    padding: 10px 24px;
   }
-  
-  .buy-btn:hover,
-  .buy-btn:focus {
-    background-color: #a32fbc;
-    transform: scale(1.1);
-    outline: none;
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      padding: 10px;
-    }
-  
-    main {
-      padding: 20px 15px;
-    }
-  
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    .nutritional-info {
-      font-size: 1rem;
-    }
-  
-    .buy-btn {
-      font-size: 1rem;
-      padding: 10px 24px;
-    }
-  }
-  
+}

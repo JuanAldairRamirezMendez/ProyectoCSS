@@ -1,14 +1,29 @@
+:root {
+    --font-body: Arial, sans-serif;
+    --bg-body: #fff8f0;
+    --color-primary: #ffb6b9;
+    --color-accent: #f11b9b;
+    --color-white: #ffffff;
+    --color-text-dark: #333;
+    --color-text-medium: #555;
+    --box-shadow-card: 0 4px 12px rgba(0,0,0,0.1);
+    --box-shadow-hover: 0 0 15px var(--color-primary);
+    --radius-card: 12px;
+    --transition-basic: 0.3s;
+    --transition-card: 0.4s;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
+    font-family: var(--font-body);
+    background-color: var(--bg-body);
     margin: 0;
     padding: 0;
 }
 header {
-    background-color: #ffb6b9;
+    background-color: var(--color-primary);
     padding: 20px;
     text-align: center;
-    color: #fff;
+    color: var(--color-white);
     animation: slideDown 1s ease-out;
 }
 .menu {
@@ -19,14 +34,14 @@ header {
     gap: 20px;
 }
 .menu li a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform var(--transition-basic), color var(--transition-basic);
 }
 .menu li a:hover {
     transform: scale(1.1) rotate(-3deg);
-    color: #f11b9b;
+    color: var(--color-accent);
 }
 main {
     padding: 0;
@@ -41,13 +56,13 @@ main > section {
 .card {
     max-width: 85%;
     height: 400px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: var(--color-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--box-shadow-card);
     text-align: center;
     padding: 20px;
     margin: 20px auto;
-    transition: transform 0.4s, box-shadow 0.4s;
+    transition: transform var(--transition-card), box-shadow var(--transition-card);
     animation: fadeInUp 0.8s ease both;
 }
 .card img {
@@ -56,7 +71,7 @@ main > section {
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 10px;
-    transition: transform 0.4s ease;
+    transition: transform var(--transition-card) ease;
 }
 .card img:hover {
     transform: rotate(-2deg) scale(1.05);
@@ -64,15 +79,15 @@ main > section {
 .card h3 {
     margin: 15px 0 5px;
     font-size: 18px;
-    color: #333;
+    color: var(--color-text-dark);
 }
 .card p {
-    color: #555;
+    color: var(--color-text-medium);
     font-size: 16px;
     margin-bottom: 15px;
 }
 .card:hover {
-    box-shadow: 0 0 15px #ffb6b9;
+    box-shadow: var(--box-shadow-hover);
 }
 @media screen and (max-width:1140px) {
     main > section {
@@ -99,9 +114,9 @@ main > section {
     to { transform: translateY(0); }
 }
 @media (max-width: 700px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
