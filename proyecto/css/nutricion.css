@@ -10,14 +10,14 @@
     background: #fff8f0;
     color: #5c3d2e;
     padding: 20px;
-    animation: fadeIn 1.5s ease forwards;
+    animation: opacidad 1.5s ease forwards;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  @keyframes fadeIn {
+  @keyframes opacidad {
     from {opacity: 0;}
     to {opacity: 1;}
   }
@@ -27,10 +27,10 @@
     max-width: 900px;
     text-align: center;
     margin-bottom: 25px;
-    animation: slideDown 1s ease forwards;
+    animation: trasladarAbajo 1s ease forwards;
   }
   
-  @keyframes slideDown {
+  @keyframes trasladarAbajo {
     from {transform: translateY(-50px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
   }
@@ -48,10 +48,10 @@
     border-radius: 15px;
     padding: 30px 25px;
     box-shadow: 0 6px 15px rgba(106, 5, 114, 0.15);
-    animation: zoomIn 1s ease forwards;
+    animation: hacerZoom 1s ease forwards;
   }
   
-  @keyframes zoomIn {
+  @keyframes hacerZoom {
     from {
       opacity: 0;
       transform: scale(0.95);
@@ -122,7 +122,6 @@
     outline: none;
   }
   
-  /* Responsive */
   @media (max-width: 600px) {
     body {
       padding: 10px;

@@ -9,10 +9,10 @@
     font-family: 'Segoe UI', sans-serif;
     background: #fff8f0;
     color: #5c3d2e;
-    animation: fadeIn 2s ease-in-out;
+    animation: opacidad 2s ease-in-out;
   }
 
-  @keyframes fadeIn {
+  @keyframes opacidad {
     from { opacity: 0; }
     to { opacity: 1; }
   }
@@ -21,10 +21,10 @@
     background-color: #ffb6b9;
     padding: 20px;
     text-align: center;
-    animation: slideDown 1s ease-out;
+    animation: trasladarAbajo 1s ease-out;
   }
  
-  @keyframes slideDown {
+  @keyframes trasladarAbajo {
     from { transform: translateY(-100%); }
     to { transform: translateY(0); }
   }
@@ -74,7 +74,7 @@
     text-align: center;
     padding: 15px;
     margin-top: 30px;
-    animation: fadeIn 1.5s ease;
+    animation: opacidad 1.5s ease;
   }
 
   .pastel-img {
@@ -85,7 +85,7 @@
     margin: 10px auto;
     border-radius: 10px;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    animation: imgFadeIn 1.5s ease;
+    animation: imagenVisible 1.5s ease;
   }
 
   .pastel-img:hover {
@@ -93,7 +93,7 @@
     opacity: 0.95;
   }
 
-  @keyframes imgFadeIn {
+  @keyframes imagenVisible {
     from {
       opacity: 0;
       transform: scale(0.9);
@@ -127,11 +127,11 @@
     display: block;
     border-radius: 12px;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    animation: imgFadeIn 1.5s ease;
+    animation: imagenVisible 1.5s ease;
   }
   
 
-  @keyframes imgFadeIn {
+  @keyframes imagenVisible {
     from {
       opacity: 0;
       transform: scale(0.9);
