@@ -26,16 +26,7 @@ body {
 /* ==========================
    Contenedor principal
 ========================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 .container {
   width: 60%;
@@ -173,6 +164,16 @@ header {
 }
 footer {
   animation: fadeIn 1.5s;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==========================
