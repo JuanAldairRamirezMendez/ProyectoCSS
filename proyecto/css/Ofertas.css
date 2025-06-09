@@ -59,7 +59,7 @@ header {
     color: #d72638;
 }
 
-section{
+main{
     padding: 40px 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
