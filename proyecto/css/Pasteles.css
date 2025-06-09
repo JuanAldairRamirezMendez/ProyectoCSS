@@ -56,6 +56,10 @@ main > section {
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+.card img:hover {
+    transform: rotate(-2deg) scale(1.05);
 }
 .card h3 {
     margin: 15px 0 5px;
@@ -66,6 +70,9 @@ main > section {
     color: #555;
     font-size: 16px;
     margin-bottom: 15px;
+}
+.card:hover {
+    box-shadow: 0 0 15px #ffb6b9;
 }
 @media screen and (max-width:1140px) {
     main > section {
