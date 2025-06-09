@@ -1,3 +1,4 @@
+/*define el fondo, color y bordes superiores redondeados */
 .footer-modern {
     background: linear-gradient(90deg, #ffb6b9 60%, #f67280 100%);
     color: #fff;
@@ -8,6 +9,7 @@
     box-shadow: 0 -4px 24px rgba(246, 114, 128, 0.15);
     font-size: 16px;
 }
+/*organiza el contenido del footer */
 .footer-content {
     display: flex;
     flex-wrap: wrap;
@@ -17,21 +19,25 @@
     margin: 0 auto 20px auto;
     gap: 30px;
 }
+/*título en el footer */
 .footer-brand h2 {
     margin: 0 0 8px 0;
     font-size: 28px;
     letter-spacing: 1px;
 }
+/*lema */
 .footer-brand p {
     margin: 0;
     font-size: 15px;
     color: #fff6;
 }
+/*contenedor de íconos sociales */
 .footer-social {
     display: flex;
     gap: 18px;
     align-items: center;
 }
+/*cada ícono social */
 .social-icon {
     display: inline-flex;
     align-items: center;
@@ -43,24 +49,29 @@
     transition: background 0.3s, transform 0.3s;
     box-shadow: 0 2px 8px rgba(255,182,185,0.15);
 }
+/*efecto al pasar el mouse sobre el ícono */
 .social-icon:hover {
     background: #fff;
     transform: scale(1.1) rotate(-5deg);
 }
+/*svg dentro del ícono */
 .social-icon svg {
     width: 24px;
     height: 24px;
     fill: #fff;
     transition: fill 0.3s;
 }
+/*efecto al pasar el mouse sobre el SVG */
 .social-icon:hover svg {
     fill: #f67280;
 }
+/*información de contacto */
 .footer-contact p {
     margin: 4px 0;
     color: #fff;
     font-size: 15px;
 }
+/*pie de copyright */
 .footer-copy {
     text-align: center;
     color: #fff9;
@@ -68,6 +79,7 @@
     margin-top: 10px;
     letter-spacing: 0.5px;
 }
+/*adaptación para pantallas medianas (ipad) */
 @media (max-width: 800px) {
     .footer-content {
         flex-direction: column;
@@ -78,7 +90,7 @@
     .footer-brand h2 {
         font-size: 22px;
     }
-}
+}/* adaptación para móviles */
 @media (max-width: 700px) {
   .menu {
     flex-direction: column;
