@@ -175,6 +175,130 @@ footer {
   animation: fadeIn 1.5s;
 }
 
+
+/* ==========================
+   Animación para el contenedor principal
+========================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--color-fondo-container);
+  box-shadow: 0 0 10px var(--sombra-container);
+  border-radius: 8px;
+  animation: fadeInUp 1s ease;
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+
+/* ==========================
+   Animación para el formulario y sus campos
+========================== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+form {
+  animation: slideInLeft 1.5s ease-out;
+}
+
+form input,
+form textarea {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+form input:nth-child(2),
+form textarea:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+form input:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* ==========================
+   Animación del botón
+========================== */
+button {
+  padding: 12px 20px;
+  background-color: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: var(--color-boton-hover);
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================
+   Animación de los campos del formulario al hacer focus
+========================== */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--color-boton-hover);
+  box-shadow: 0 0 8px #db6fd655;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  transform: scale(1.02);
+}
+
+/* ==========================
+   Animación de entrada para el header
+========================== */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+header {
+  background-color: var(--color-header-footer);
+  padding: 20px;
+  text-align: center;
+  animation: slideDown 1s cubic-bezier(.4,2,.6,1);
+}
+
+/* ==========================
+   Animación para el footer
+========================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+footer {
+  background-color: var(--color-header-footer);
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
 /* ==========================
    Responsividad
 ========================== */
@@ -190,3 +314,4 @@ footer {
     padding: 20px;
   }
 }
+
