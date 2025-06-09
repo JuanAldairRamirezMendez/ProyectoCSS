@@ -89,6 +89,28 @@ section {
     justify-content: center;
     align-items: center;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .pastel {
+  animation: fadeInUp 0.8s ease both;
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.card img, .pastel-img {
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.card img:hover, .pastel-img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(255,182,185,0.25);
+}
 
 .card {
     max-width: 85%;
